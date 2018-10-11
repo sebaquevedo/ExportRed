@@ -1,0 +1,231 @@
+<app-header></app-header>
+<app-menu></app-menu>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+   <section class="content-header">
+    <h1>
+      Dashboard
+      <small>-</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Dashboard</li>
+    </ol>
+  </section>
+  <section class="content">
+    <!-- BAR CHART -->
+    <div class="row">
+        <div class="col-md-6">
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">Bar Chart</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="barChart" style="height:230px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+          <!-- /.col -->
+        <div class="col-md-6">
+          <!-- DONUT CHART -->
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">Donut Chart</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <canvas id="pieChart" style="height:250px"></canvas>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Datos tabla consultada</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Descripcion</th>
+                  <th>Fecha</th>
+                  <th>Tecnologia</th>
+                  <th>MO</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>4G</td>
+                  <td> Version 14.0</td>
+                  <td>23/05/2018</td>
+                  <td> 4</td>
+                  <td>X</td>
+                </tr>
+                <tr>
+                  <td>4G</td>
+                  <td> Version 1</td>
+                  <td>23/05/2018</td>
+                  <td>5</td>
+                  <td>C</td>
+                </tr>
+                <tr>
+                  <td>4G</td>
+                  <td> Version 1
+                    Explorer 5.5
+                  </td>
+                  <td>23/05/2018</td>
+                  <td>5.5</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>4G</td>
+                  <td> Version 1
+                    Explorer 6
+                  </td>
+                  <td> </td>
+                  <td>6</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>4G</td>
+                  <td>Version7</td>
+                  <td>05/07/2018</td>
+                  <td>7</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>4G</td>
+                  <td>AOL browser (AOL desktop)</td>
+                  <td>05/07/2018</td>
+                  <td>6</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>version 1.0</td>
+                  <td>07/03/2018</td>
+                  <td>1.7</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>version 1.5</td>
+                  <td>07/03/2018</td>
+                  <td>1.8</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>Firefox 2.0</td>
+                  <td>  07/03/2018</td>
+                  <td>1.8</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>Firefox 3.0</td>
+                  <td>Win 2k+ / OSX.3+</td>
+                  <td>1.9</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>Camino 1.0</td>
+                  <td>07/03/2018</td>
+                  <td>1.8</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>Camino 1.5</td>
+                  <td>OSX.3+</td>
+                  <td>1.8</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>Netscape 7.2</td>
+                  <td>23/05/2018 / Mac OS 8.6-9.2</td>
+                  <td>1.7</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>Netscape Browser 8</td>
+                  <td>Win 98SE+</td>
+                  <td>1.7</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>Netscape Navigator 9</td>
+                  <td>  / 07/03/2018</td>
+                  <td>1.8</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>Mozilla 1.0</td>
+                  <td>23/05/2018 / OSX.1+</td>
+                  <td>1</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>Mozilla 1.1</td>
+                  <td>23/05/2018 / OSX.1+</td>
+                  <td>1.1</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Carrier Agregation</td>
+                  <td>Mozilla 1.2</td>
+                  <td>23/05/2018 / OSX.1+</td>
+                  <td>1.2</td>
+                  <td>A</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Descripcion</th>
+                  <th>Fecha</th>
+                  <th>Tecnologia</th>
+                  <th>MO</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+  </section>
+</div>
+<app-footer></app-footer>
+<app-settings></app-settings>
