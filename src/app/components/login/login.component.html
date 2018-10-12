@@ -21,7 +21,11 @@
             <a href="#" class="close" data-dismiss="alert">&times;</a>
             <strong>Aviso!</strong> hubo un problema en su conexion.
           </div> -->
-          <label class="error">{{errorMessage}}</label>
+          <div class="alert alert-warning" *ngIf="errorMessage ">
+            <strong>Error de Inicio de sesion!</strong>
+            {{errorMessage}}
+          </div>
+
         </div>
         <!-- <button type="submit" (click)="tryLogin(loginForm.value)" class="btn btn-default">Login</button> -->
         <button type="submit" (click)="doLogin(autenticacion)" class="btn btn-default">Login</button>

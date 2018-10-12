@@ -58,24 +58,23 @@ export class LoginComponent implements OnInit {
 
     this._autenticacionService.doLogin(this.autenticacion).subscribe(
       result => {
-        const respuesta = JSON.stringify(result.status);
 
-        console.log(respuesta);
-        if(respuesta == "success"){
-        console.log("existo");
-      }else if(respuesta == "error"){
-         console.log("no existo")
+        if(result.code != 200){
+          console.log(result.status);
+
+        }else{
+        //  console.log(respuesta);
         }
-          // if(result.code="200"){
-          //   this.successMessage = result.message;
-          //   this.router.navigate(['/dashboard']);
-          // }else if( result.code="404"){
-          //   this.errorMessage = result.message;
-          // }
+        if(result.code="200"){
+          this.successMessage = result.message;
+          this.router.navigate(['/dashboard']);
+        }else if( result.code="404"){
+          this.errorMessage = result.message;
+        }
       },
       error => {
         console.log(error);
-        //this.errorMessage = error.message;
+        this.errorMessage = "Usuario o contraseña son incorrectos.";
       });
   }
 
