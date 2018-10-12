@@ -9,6 +9,8 @@ import { PreferenciasComponent } from './components/preferencias/preferencias.co
 import { CambiosComponent } from './components/cambios/cambios.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+
 
 const appRoutes: Routes = [
   {path:'',component: LoginComponent},
@@ -18,7 +20,8 @@ const appRoutes: Routes = [
   {path:'reportes',component: ReportesComponent},
   {path:'preferencias',component: PreferenciasComponent},
   {path:'cambios',component: CambiosComponent},
-  {path:'**',component: ErrorComponent},
+  {path:'perfil',component: PerfilComponent},
+  {path:'**',component: ErrorComponent}
 
 ];
 

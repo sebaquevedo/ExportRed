@@ -21,6 +21,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { AutenticacionService} from './services/autenticacion/autenticacion.service';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AutenticacionService} from './services/autenticacion/autenticacion.serv
     PreferenciasComponent,
     CambiosComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

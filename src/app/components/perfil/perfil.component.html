@@ -1,0 +1,252 @@
+<app-header></app-header>
+<app-menu></app-menu>
+<div class="content-wrapper">
+  <section class="content-header">
+  <h1>
+  Mi perfil
+  <small>-</small>
+  </h1>
+  <ol class="breadcrumb">
+  <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+  <li class="active">Mi Perfil</li>
+  </ol>
+  </section>
+  <section class="content">
+    <div class="row">
+      <div class="col-md-6">
+      <!-- Horizontal Form -->
+      <div class="box box-info">
+      <div class="box-header with-border">
+       <h3 class="box-title">Datos Personales</h3>
+      </div>
+      <!-- /.box-header -->
+      <!-- box profile start -->
+
+      <div class="box-body">
+        <div class="row">
+          <div class="col-md-6">
+            <strong><i class="fa fa-user margin-r-5"></i> Nombre</strong>
+            <p class="text-muted">
+            Usuario - Prueba
+            </p>
+            <strong>Apellido</strong>
+            <p class="text-muted">
+              Benjamin - Prueba
+            </p>
+          </div>
+          <div class="col-md-6">
+            <strong><i class="fa fa-phone margin-r-5"></i> Telefono</strong>
+            <p class="text-muted">
+              <li>Movil: +569 8527 4123</li>
+              <li>Fijo: +569 4512 5623</li>
+            </p>
+            <strong><i class="fa fa-envelope margin-r-5"></i>Correo</strong>
+            <p class="text-muted">
+              correo@prueba.cl
+            </p>
+          </div>
+        </div>
+
+
+        <hr>
+
+        <strong><i class="fa fa-male margin-r-5"></i> Perfil</strong>
+
+        <p>
+
+          <span class="label label-success">Admin</span>
+          <span class="label label-info">User</span>
+
+        </p>
+      </div>
+      <div class="box-footer">
+        <button type="submit" class="btn btn-info pull-left" data-toggle="modal" data-target="#actualizarPerfil">Actualizar Perfil</button>
+        <button type="submit" class="btn btn-info pull-right" data-toggle="modal" data-target="#modificarContrasena">Modificar Contraseña</button>
+      </div>
+      <div class="box-footer">
+        <button type="submit" class="btn btn-info pull-left" data-toggle="modal" data-target="#crearNuevoUsuario">Crear Nuevo Usuario</button>
+      </div>
+      <!-- /.box-footer -->
+      </div>
+      <!-- /.box -->
+      </div>
+      <!-- /.col -->
+    </div>
+  </section>
+</div>
+<app-footer></app-footer>
+<!-- Modal actualizarPerfil-->
+<div class="modal fade" id="actualizarPerfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Actualizar Perfil</h4>
+      </div>
+      <div class="modal-body">
+        <!-- form start -->
+        <form role="form">
+          <div class="box-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nombre</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Apellido</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Telefono Movil</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Telefono Fijo</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Correo Actual</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <!-- radio -->
+                <div class="form-group">
+                    <label >Tipo de Usuario</label>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Administrador
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                      Usuario
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.box-body -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal modificarContrasena-->
+<div class="modal fade" id="modificarContrasena" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modificar Contrasena</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="box-body">
+            <div class="row">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña actual</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Nueva Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                 <p class="help-block">Debe tener 6 caracteres minimo, 10 maximo</p>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Confirmar Nueva Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+            </div>
+          </div>
+          <!-- /.box-body -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal CrearNuevoUsuario-->
+<div class="modal fade" id="crearNuevoUsuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Crear Nuevo Usuario</h4>
+      </div>
+      <div class="modal-body">
+        <!-- form start -->
+        <form role="form">
+          <div class="box-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nombre</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Rut</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Correo electronico</label>
+                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Confirmar correo electronico</label>
+                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Apellido</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Telefono</label>
+                  <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">confirmar contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label class="control-sidebar-subheading">
+                    <b>Contraseña por defecto</b>
+                    <input type="checkbox" class="pull-right" checked>
+                  </label>
+
+                  <p>
+                    (establecer contraseña por defecto)
+                  </p>
+                </div>
+                <!-- /.form-group -->
+              </div>
+            </div>
+          </div>
+          <!-- /.box-body -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Registrar Usuario</button>
+      </div>
+    </div>
+  </div>
+</div>
