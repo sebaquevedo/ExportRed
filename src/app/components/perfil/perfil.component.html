@@ -286,6 +286,11 @@
           </div>
           <!-- /.box-body -->
         </form>
+        <div *ngIf="successMessage" class="alert alert-success alert-dismissible">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Todo bien!</strong> {{successMessage}}.
+        </div>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

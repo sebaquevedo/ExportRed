@@ -63,7 +63,7 @@ export class LoginComponent implements OnInit {
           console.log(result.status);
 
         }else{
-        //  console.log(respuesta);
+        
         }
         if(result.code="200"){
           this.successMessage = result.message;

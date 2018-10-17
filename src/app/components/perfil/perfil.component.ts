@@ -49,7 +49,7 @@ export class PerfilComponent implements OnInit {
   registerUser(autenticacion) {
 
       //console.log(this.autenticacion);
-    
+
       this._registerService.doRegister(this.autenticacion).subscribe(
         result => {
 
@@ -61,6 +61,13 @@ export class PerfilComponent implements OnInit {
           }
           if(result.code="200"){
             this.successMessage = result.message;
+            //setear localStorage o cookie
+            //borrado del modelo de autenticacion
+            setTimeout(function() {
+                $(".alert-success").fadeOut(500);
+            }, 2000);
+
+            this.autenticacion= new Autenticacion('','','','','',0);
             //this.router.navigate(['/dashboard']);
           }else if( result.code="404"){
             this.errorMessage = result.message;
