@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     private _autenticacionService: AutenticacionService
   ) {
     this.createForm();
-    this.autenticacion= new Autenticacion('','');
+    this.autenticacion= new Autenticacion('','','','','',0);
    }
 
   ngOnInit() {

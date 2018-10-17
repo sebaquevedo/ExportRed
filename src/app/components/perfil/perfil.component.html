@@ -194,48 +194,60 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Nombre</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese su nombre" name="nombre" [(ngModel)]="autenticacion.nombre">
                 </div>
+                {{autenticacion.nombre}}
                 <div class="form-group">
                   <label for="exampleInputPassword1">Rut</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su rut" name="rut" [(ngModel)]="autenticacion.rut">
                 </div>
+                {{autenticacion.rut}}
                 <div class="form-group">
                   <label for="exampleInputPassword1">Correo electronico</label>
-                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Correo Electronico" name="correo" [(ngModel)]="autenticacion.correo">
                 </div>
+                {{autenticacion.correo}}
                 <div class="form-group">
                   <label for="exampleInputPassword1">Confirmar correo electronico</label>
-                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Confirme correo electronico">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="exampleInputPassword1">Apellido</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellido" name="apellido" [(ngModel)]="autenticacion.apellido">
                 </div>
+                {{autenticacion.apellido}}
+                <!-- /.form-group -->
                 <div class="form-group">
                   <label for="exampleInputPassword1">Telefono</label>
-                  <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Telefono" name="telefono" [(ngModel)]="autenticacion.telefono">
                 </div>
+                {{autenticacion.telefono}}
+                <!-- /.form-group -->
                 <div class="form-group">
                   <label for="exampleInputPassword1">Contraseña</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese contraseña">
                 </div>
+                {{autenticacion.password}}
+                <!-- /.form-group -->
                 <div class="form-group">
                   <label for="exampleInputPassword1">confirmar contraseña</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirme su contraseña">
                 </div>
+
+                <!-- /.form-group -->
                 <div class="form-group">
                   <label class="control-sidebar-subheading">
                     <b>Contraseña por defecto</b>
-                    <input type="checkbox" class="pull-right" checked>
+                    <input type="checkbox" class="pull-right"  (change)="toggleEditable($event)">
                   </label>
 
                   <p>
                     (establecer contraseña por defecto)
                   </p>
                 </div>
+                {{passwordByDefault}}
                 <!-- /.form-group -->
               </div>
             </div>
@@ -245,7 +257,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Registrar Usuario</button>
+        <button type="button" class="btn btn-primary" (click)="registerUser(autenticacion)">Registrar Usuario</button>
       </div>
     </div>
   </div>

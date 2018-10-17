@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
 
   doRegister(value){
 
-    let register = new Autenticacion(value.email,value.password)
+    let register = new Autenticacion(value.email,value.password,'','','',0)
     this._autenticacionService.doRegister(register).subscribe(
       result => {
         console.log(result);
