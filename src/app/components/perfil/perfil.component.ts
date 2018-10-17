@@ -16,6 +16,9 @@ export class PerfilComponent implements OnInit {
     errorMessage: string = '';
     successMessage: string = '';
     public passwordByDefault: boolean = false;
+    public ischecked: any;
+    public showPassword: boolean = false;
+    public confirmPassword: string = '';
 
   constructor(
     private _registerService: RegisterService
@@ -28,20 +31,25 @@ export class PerfilComponent implements OnInit {
 
   toggleEditable(event) {
       if ( event.target.checked ) {
-          let ischecked = $(this).is(':checked');
+          this.ischecked = $(this).is(':checked');
           this.passwordByDefault = true;
        }
-       else if (!ischecked){
+       else if (!this.ischecked){
         this.passwordByDefault = false;
       }
+  }
+  toggleShowPassword(){
+    if(this.showPassword){
+      this.showPassword = false;
+    }else if(!this.showPassword){
+      this.showPassword = true;
+    }
   }
 
   registerUser(autenticacion) {
 
       //console.log(this.autenticacion);
-      if(this.passwordByDefault){
-        alert("se creara contraseña por defecto!");
-      }
+    
       this._registerService.doRegister(this.autenticacion).subscribe(
         result => {
 

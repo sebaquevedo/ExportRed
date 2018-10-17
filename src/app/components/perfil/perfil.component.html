@@ -152,18 +152,20 @@
         <form role="form">
           <div class="box-body">
             <div class="row">
-              <div class="form-group">
-                <label for="exampleInputPassword1">Contraseña actual</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Nueva Contraseña</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                 <p class="help-block">Debe tener 6 caracteres minimo, 10 maximo</p>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Confirmar Nueva Contraseña</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <div class="col-md-12">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Contraseña actual</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Nueva Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                   <p class="help-block">Debe tener 6 caracteres minimo, 10 maximo</p>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Confirmar Nueva Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
               </div>
             </div>
           </div>
@@ -194,46 +196,76 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Nombre</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese su nombre" name="nombre" [(ngModel)]="autenticacion.nombre">
+                  <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" name="nombre" [(ngModel)]="autenticacion.nombre">
                 </div>
-                {{autenticacion.nombre}}
+                <!--{{autenticacion.nombre}}-->
                 <div class="form-group">
                   <label for="exampleInputPassword1">Rut</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su rut" name="rut" [(ngModel)]="autenticacion.rut">
+                  <input type="text" class="form-control" id="rut" placeholder="Ingrese su rut" name="rut" [(ngModel)]="autenticacion.rut">
                 </div>
-                {{autenticacion.rut}}
+                <!--{{autenticacion.rut}}-->
                 <div class="form-group">
                   <label for="exampleInputPassword1">Correo electronico</label>
-                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Correo Electronico" name="correo" [(ngModel)]="autenticacion.correo">
+                  <input type="email" class="form-control" id="email" placeholder="Correo Electronico" name="email" [(ngModel)]="autenticacion.email">
                 </div>
-                {{autenticacion.correo}}
+                <!--{{autenticacion.correo}}-->
                 <div class="form-group">
                   <label for="exampleInputPassword1">Confirmar correo electronico</label>
-                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Confirme correo electronico">
+                  <input type="email" class="form-control" id="emailConfirm" placeholder="Confirme correo electronico">
                 </div>
               </div>
+              <!-- /.form-group -->
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="exampleInputPassword1">Apellido</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellido" name="apellido" [(ngModel)]="autenticacion.apellido">
+                  <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="apellido" [(ngModel)]="autenticacion.apellido">
                 </div>
-                {{autenticacion.apellido}}
+                <!--{{autenticacion.apellido}}-->
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label for="exampleInputPassword1">Telefono</label>
-                  <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Telefono" name="telefono" [(ngModel)]="autenticacion.telefono">
+                  <input type="number" class="form-control" id="telefono" placeholder="Telefono" name="telefono" [(ngModel)]="autenticacion.telefono">
                 </div>
-                {{autenticacion.telefono}}
+                <!--{{autenticacion.telefono}}-->
                 <!-- /.form-group -->
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Contraseña</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese contraseña">
+                <div *ngIf="!showPassword">
+                  <div class="form-group has-feedback">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    <input type="password" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Ingrese contraseña" name="password" [(ngModel)]="autenticacion.password">
+                     <span *ngIf="!showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-open form-control-feedback"
+                      style="cursor: pointer; pointer-events: all;">
+                    </span>
+                  </div>
                 </div>
-                {{autenticacion.password}}
+                <div *ngIf="showPassword">
+                  <div class="form-group has-feedback">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    <input type="text" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Ingrese contraseña" name="password" [(ngModel)]="autenticacion.password">
+                     <span *ngIf="showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-close form-control-feedback"
+                      style="cursor: pointer; pointer-events: all;">
+                    </span>
+                  </div>
+                </div>
+                <!--{{autenticacion.password}}-->
                 <!-- /.form-group -->
-                <div class="form-group">
-                  <label for="exampleInputPassword1">confirmar contraseña</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirme su contraseña">
+                <div *ngIf="!showPassword">
+                  <div class="form-group has-feedback">
+                    <label for="exampleInputPassword1">confirmar contraseña</label>
+                    <input type="password" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Confirme su contraseña" name="confirmPassword" [(ngModel)]="confirmPassword">
+                    <span *ngIf="!showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-open form-control-feedback"
+                     style="cursor: pointer; pointer-events: all;">
+                   </span>
+                  </div>
+                </div>
+
+                <div *ngIf="showPassword">
+                  <div class="form-group has-feedback">
+                    <label for="exampleInputPassword1">confirmar contraseña</label>
+                    <input type="text" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Confirme su contraseña" name="confirmPassword" [(ngModel)]="confirmPassword">
+                    <span *ngIf="showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-close form-control-feedback"
+                     style="cursor: pointer; pointer-events: all;">
+                   </span>
+                  </div>
                 </div>
 
                 <!-- /.form-group -->
@@ -247,7 +279,7 @@
                     (establecer contraseña por defecto)
                   </p>
                 </div>
-                {{passwordByDefault}}
+                <!--{{passwordByDefault}}-->
                 <!-- /.form-group -->
               </div>
             </div>
