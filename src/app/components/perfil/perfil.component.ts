@@ -48,8 +48,6 @@ export class PerfilComponent implements OnInit {
 
   registerUser(autenticacion) {
 
-      //console.log(this.autenticacion);
-
       this._registerService.doRegister(this.autenticacion).subscribe(
         result => {
 
@@ -62,20 +60,26 @@ export class PerfilComponent implements OnInit {
           if(result.code="200"){
             this.successMessage = result.message;
             //setear localStorage o cookie
-            //borrado del modelo de autenticacion
+            //alert success autoremovible
             setTimeout(function() {
                 $(".alert-success").fadeOut(500);
             }, 2000);
-
+            //borrado del modelo de autenticacion
             this.autenticacion= new Autenticacion('','','','','',0);
             //this.router.navigate(['/dashboard']);
           }else if( result.code="404"){
+          setTimeout(function() {
+              $(".alert-error").fadeOut(500);
+          }, 2000);
             this.errorMessage = result.message;
           }
         },
         error => {
           console.log(error);
-          this.errorMessage = "Usuario o contraseña son incorrectos.";
+          setTimeout(function() {
+              $(".alert-error").fadeOut(2000);
+          }, 4000);
+          this.errorMessage = error.error.message;
         });
 
   }

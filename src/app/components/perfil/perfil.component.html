@@ -37,8 +37,8 @@
           <div class="col-md-6">
             <strong><i class="fa fa-phone margin-r-5"></i> Telefono</strong>
             <p class="text-muted">
-              <li>Movil: +569 8527 4123</li>
-              <li>Fijo: +569 4512 5623</li>
+              Movil: +569 8527 4123
+              Fijo: +569 4512 5623
             </p>
             <strong><i class="fa fa-envelope margin-r-5"></i>Correo</strong>
             <p class="text-muted">
@@ -290,6 +290,11 @@
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
           <strong>Todo bien!</strong> {{successMessage}}.
         </div>
+        <div *ngIf="errorMessage" class="alert alert-error alert-dismissible">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Hubo un error!</strong> {{errorMessage}}.
+        </div>
+
 
       </div>
       <div class="modal-footer">
