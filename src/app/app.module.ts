@@ -22,6 +22,8 @@ import { RegisterComponent } from './components/register/register.component';
 
 import { AutenticacionService} from './services/autenticacion/autenticacion.service';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { RecoverPasswordComponent } from './components/recover-password/recover-password.component';
+
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     CambiosComponent,
     LoginComponent,
     RegisterComponent,
-    PerfilComponent
+    PerfilComponent,
+    RecoverPasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { CambiosComponent } from './components/cambios/cambios.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { RecoverPasswordComponent } from './components/recover-password/recover-password.component';
 
 
 const appRoutes: Routes = [
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
   {path:'preferencias',component: PreferenciasComponent},
   {path:'cambios',component: CambiosComponent},
   {path:'perfil',component: PerfilComponent},
+  {path:'recuperarContraseña',component: RecoverPasswordComponent},
   {path:'**',component: ErrorComponent}
 
 ];

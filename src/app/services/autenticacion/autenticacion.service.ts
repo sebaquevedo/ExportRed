@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 import { Observable, of, Subject } from 'rxjs';
 //import { Observable } from 'rxjs/Observable';
 import { Autenticacion } from '../../models/autenticacion';
+import { RecoverPassword } from '../../models/recoverPassword';
 import { GLOBAL } from '../global';
 
 @Injectable()
@@ -24,7 +25,7 @@ export class AutenticacionService{
 
   doLogin(autenticacion: Autenticacion): Observable<any>{
      let json = JSON.stringify(autenticacion);
-     console.log(json);
+     
       let params = "json="+json;
       let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
       return this._http.post(this.url+'login', params, {headers: headers});
@@ -32,10 +33,19 @@ export class AutenticacionService{
 
   doRegister(autenticacion: Autenticacion): Observable<any>{
     let json = JSON.stringify(autenticacion);
-    console.log(json);
+
      let params = "json="+json;
      let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
      return this._http.post(this.url+'register', params, {headers: headers});
+
+  }
+
+  doRecoverPassword(recoverPassword: RecoverPassword): Observable<any>{
+    let json = JSON.stringify(recoverPassword);
+    console.log(json);
+     let params = "json="+json;
+     let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+     return this._http.post(this.url+'recuperarContrasena', params, {headers: headers});
 
   }
 
