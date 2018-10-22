@@ -18,41 +18,30 @@
     <div class="navbar-custom-menu">
       <ul class="nav navbar-nav">
         <!-- Messages: style can be found in dropdown.less-->
-        <li>
+        <!-- <li>
           <a href="/dashboard">
             <i class="fa fa-dashboard"></i>
-            <!--<span class="label label-success">4</span>-->
+            <!--<span class="label label-success">4</span>
             <span> Dashboard</span>
           </a>
 
         </li>
-
-        <!-- <li>
-          <a href="/reportes">
-            <i class="fa fa-file-text"></i>
-            <span class="label label-success">4</span>
-            <span> Reportes</span>
-          </a>
-
-        </li> -->
-
         <li>
           <a href="/preferencias">
             <i class="fa fa-gear"></i>
-            <!--<span class="label label-success">4</span>-->
+            <!--<span class="label label-success">4</span>
             <span> Preferencias</span>
           </a>
 
         </li>
-
         <li>
           <a href="/cambios">
             <i class="fa fa-edit"></i>
-            <!--<span class="label label-success">4</span>-->
+            <!--<span class="label label-success">4</span>
             <span> Mis Cambios</span>
           </a>
 
-        </li>
+        </li> -->
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -87,7 +76,7 @@
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="pull-left">
-                <a href="/perfil" class="btn btn-default btn-flat">Perfil</a>
+                <a [routerLink]="['/perfil']" class="btn btn-default btn-flat">Perfil</a>
               </div>
               <div class="pull-right">
                 <a href="#" class="btn btn-default btn-flat">Salir</a>

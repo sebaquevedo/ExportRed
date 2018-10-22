@@ -4,6 +4,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { RecoverPassword } from '../../models/recoverPassword';
 import { AutenticacionService } from'../../services/autenticacion/autenticacion.service';
 import { Router, Params } from '@angular/router';
+//jquery
+declare var $:any;
 
 
 @Component({
@@ -44,15 +46,14 @@ export class RecoverPasswordComponent implements OnInit {
     this._autenticacionService.doRecoverPassword(this.recoverPassword).subscribe(
       result => {
 
-        if(result.code != 200){
-          console.log(result.status);
-
-        }else{
-
-        }
-        if(result.code="200"){
+          if(result.code="200"){
           this.successMessage = result.message;
-          this.router.navigate(['/dashboard']);
+          setTimeout(function() {
+              $(".alert-success").fadeOut(500);
+          }, 5000);
+          setTimeout(() => {
+              this.router.navigate(['/login']);
+          }, 5000);
         }else if( result.code="404"){
           this.errorMessage = result.message;
         }

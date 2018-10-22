@@ -1,100 +1,102 @@
-<app-header></app-header>
-<app-menu></app-menu>
-<div class="content-wrapper">
-  <section class="content-header">
-   <h1>
-     Preferencias
-     <small>-</small>
-   </h1>
-   <ol class="breadcrumb">
-     <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-     <li class="active">preferencias</li>
-   </ol>
-  </section>
-  <section class="content">
-    <div class="row">
-      <div class="col-md-6">
-        <!-- Horizontal Form -->
-        <div class="box box-info">
-        <div class="box-header with-border">
-          <h3 class="box-title">Crear Preferencia</h3>
-        </div>
-        <!-- /.box-header -->
-        <!-- form start -->
-        <form class="form-horizontal">
-          <div class="box-body">
-            <div class="form-group">
-              <div class="col-sm-10">
-                  <label>Planed Area</label>
-                  <select class="form-control">
-                    <option>option 1</option>
-                    <option>option 2</option>
-                    <option>option 3</option>
-                    <option>option 4</option>
-                    <option>option 5</option>
-                  </select>
+<div class="wrapper">
+  <app-header></app-header>
+  <app-menu></app-menu>
+  <div class="content-wrapper">
+    <section class="content-header">
+     <h1>
+       Preferencias
+       <small>-</small>
+     </h1>
+     <ol class="breadcrumb">
+       <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+       <li class="active">preferencias</li>
+     </ol>
+    </section>
+    <section class="content">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Horizontal Form -->
+          <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title">Crear Preferencia</h3>
+          </div>
+          <!-- /.box-header -->
+          <!-- form start -->
+          <form class="form-horizontal">
+            <div class="box-body">
+              <div class="form-group">
+                <div class="col-sm-10">
+                    <label>Planed Area</label>
+                    <select class="form-control">
+                      <option>option 1</option>
+                      <option>option 2</option>
+                      <option>option 3</option>
+                      <option>option 4</option>
+                      <option>option 5</option>
+                    </select>
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-10">
-                  <label>MO</label>
-                  <select class="form-control">
-                    <option>option 1</option>
-                    <option>option 2</option>
-                    <option>option 3</option>
-                    <option>option 4</option>
-                    <option>option 5</option>
-                  </select>
+              <div class="form-group">
+                <div class="col-sm-10">
+                    <label>MO</label>
+                    <select class="form-control">
+                      <option>option 1</option>
+                      <option>option 2</option>
+                      <option>option 3</option>
+                      <option>option 4</option>
+                      <option>option 5</option>
+                    </select>
+                </div>
               </div>
+              <div style="margin-left: 2px;" class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+
+                <p class="help-block">Subir preferencia desde archivo local</p>
+              </div>
+
             </div>
-            <div style="margin-left: 2px;" class="form-group">
-              <label for="exampleInputFile">File input</label>
-              <input type="file" id="exampleInputFile">
-
-              <p class="help-block">Subir preferencia desde archivo local</p>
+            <!-- /.box-body -->
+            <div class="box-footer">
+              <button type="submit" class="btn btn-info pull-right">Añadir</button>
             </div>
+            <!-- /.box-footer -->
 
-          </div>
-          <!-- /.box-body -->
-          <div class="box-footer">
-            <button type="submit" class="btn btn-info pull-right">Añadir</button>
-          </div>
-          <!-- /.box-footer -->
-
-        </form>
-        <!-- form end -->
-      </div>
-        <!-- /.box -->
-      </div>
-      <div class="col-md-6">
-        <!-- Horizontal Form -->
-        <div class="box box-info">
-        <div class="box-header with-border">
-          <h3 class="box-title">Preferencias añadidas</h3>
+          </form>
+          <!-- form end -->
         </div>
-        <!-- /.box-header -->
-        <!-- form start -->
-        <form class="form-horizontal">
-          <div class="box-body">
-            <ol>
-              <li>MO ONE</li>
-              <li>MO TWO</li>
-              <li>MO THREE</li>
-              <li>MO FOUR</li>
-            </ol>
+          <!-- /.box -->
+        </div>
+        <div class="col-md-6">
+          <!-- Horizontal Form -->
+          <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title">Preferencias añadidas</h3>
           </div>
-          <!-- /.box-body -->
-          <div class="box-footer">
-            <button type="submit" class="btn btn-info pull-right">Guardar</button>
-          </div>
-          <!-- /.box-footer -->
+          <!-- /.box-header -->
+          <!-- form start -->
+          <form class="form-horizontal">
+            <div class="box-body">
+              <ol>
+                <li>MO ONE</li>
+                <li>MO TWO</li>
+                <li>MO THREE</li>
+                <li>MO FOUR</li>
+              </ol>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+              <button type="submit" class="btn btn-info pull-right">Guardar</button>
+            </div>
+            <!-- /.box-footer -->
 
-        </form>
+          </form>
+        </div>
+          <!-- /.box -->
+        </div>
       </div>
-        <!-- /.box -->
-      </div>
-    </div>
 
-  </section>
+    </section>
+  </div>
+  <app-footer></app-footer>
 </div>
-<app-footer></app-footer>

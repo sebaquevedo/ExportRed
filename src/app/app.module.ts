@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 declare var $:any;
 //routing
 import {routing , appRoutingProviders } from './app.routing';
+import { RouterModule, Routes } from '@angular/router';
 //componentes
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -48,7 +49,8 @@ import { RecoverPasswordComponent } from './components/recover-password/recover-
     routing,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [appRoutingProviders,AutenticacionService],
   bootstrap: [AppComponent]

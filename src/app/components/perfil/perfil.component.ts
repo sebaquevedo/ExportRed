@@ -64,6 +64,7 @@ export class PerfilComponent implements OnInit {
             setTimeout(function() {
                 $(".alert-success").fadeOut(500);
             }, 2000);
+            
             //borrado del modelo de autenticacion
             this.autenticacion= new Autenticacion('','','','','',0);
             //this.router.navigate(['/dashboard']);
