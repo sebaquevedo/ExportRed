@@ -10,7 +10,9 @@ export class PreferenciasComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+     $('body').layout('fix'); 
   }
+
   ngAfterViewInit() {
     $('#datepicker').datepicker();
   }

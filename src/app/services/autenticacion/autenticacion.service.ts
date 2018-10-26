@@ -25,7 +25,7 @@ export class AutenticacionService{
 
   doLogin(autenticacion: Autenticacion): Observable<any>{
      let json = JSON.stringify(autenticacion);
-     
+
       let params = "json="+json;
       let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
       return this._http.post(this.url+'login', params, {headers: headers});
@@ -42,11 +42,10 @@ export class AutenticacionService{
 
   doRecoverPassword(recoverPassword: RecoverPassword): Observable<any>{
     let json = JSON.stringify(recoverPassword);
-    console.log(json);
+  
      let params = "json="+json;
      let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
      return this._http.post(this.url+'recuperarContrasena', params, {headers: headers});
-
   }
 
 

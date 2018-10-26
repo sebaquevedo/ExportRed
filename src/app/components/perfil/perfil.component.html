@@ -15,295 +15,298 @@
     <section class="content">
       <div class="row">
         <div class="col-md-6">
-        <!-- Horizontal Form -->
-        <div class="box box-info">
-        <div class="box-header with-border">
-         <h3 class="box-title">Datos Personales</h3>
-        </div>
-        <!-- /.box-header -->
-        <!-- box profile start -->
+          <!-- Horizontal Form -->
+          <div class="box box-info">
+          <div class="box-header with-border">
+           <h3 class="box-title">Datos Personales</h3>
+          </div>
+          <!-- /.box-header -->
+          <!-- box profile start -->
 
-        <div class="box-body">
-          <div class="row">
-            <div class="col-md-6">
-              <strong><i class="fa fa-user margin-r-5"></i> Nombre</strong>
-              <p class="text-muted">
-              Usuario - Prueba
-              </p>
-              <strong>Apellido</strong>
-              <p class="text-muted">
-                Benjamin - Prueba
-              </p>
+          <div class="box-body">
+            <div class="row">
+              <div class="col-md-6">
+                <strong><i class="fa fa-user margin-r-5"></i> Nombre</strong>
+                <p class="text-muted">
+                Usuario - Prueba
+                </p>
+                <strong>Apellido</strong>
+                <p class="text-muted">
+                  Benjamin - Prueba
+                </p>
+              </div>
+              <div class="col-md-6">
+                <strong><i class="fa fa-phone margin-r-5"></i> Telefono</strong>
+                <p class="text-muted">
+                  Movil: +569 8527 4123
+                  Fijo: +569 4512 5623
+                </p>
+                <strong><i class="fa fa-envelope margin-r-5"></i>Correo</strong>
+                <p class="text-muted">
+                  correo@prueba.cl
+                </p>
+              </div>
             </div>
-            <div class="col-md-6">
-              <strong><i class="fa fa-phone margin-r-5"></i> Telefono</strong>
-              <p class="text-muted">
-                Movil: +569 8527 4123
-                Fijo: +569 4512 5623
-              </p>
-              <strong><i class="fa fa-envelope margin-r-5"></i>Correo</strong>
-              <p class="text-muted">
-                correo@prueba.cl
-              </p>
+
+
+            <hr>
+
+            <strong><i class="fa fa-male margin-r-5"></i> Perfil</strong>
+
+            <p>
+
+              <span class="label label-success">Admin</span>
+              <span class="label label-info">User</span>
+
+            </p>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-info pull-left" data-toggle="modal" data-target="#actualizarPerfil">Actualizar Perfil</button>
+            <button type="submit" class="btn btn-info pull-right" data-toggle="modal" data-target="#modificarContrasena">Modificar Contraseña</button>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-info pull-left" data-toggle="modal" data-target="#crearNuevoUsuario">Crear Nuevo Usuario</button>
+          </div>
+          <!-- /.box-footer -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-6">
+          <!-- Modal actualizarPerfil-->
+          <div class="modal fade" id="actualizarPerfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Actualizar Perfil</h4>
+                </div>
+                <div class="modal-body">
+                  <!-- form start -->
+                  <form role="form">
+                    <div class="box-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Nombre</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Apellido</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Telefono Movil</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Telefono Fijo</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Correo Actual</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          </div>
+                          <!-- radio -->
+                          <div class="form-group">
+                              <label >Tipo de Usuario</label>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                  Administrador
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                Usuario
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- Modal modificarContrasena-->
+          <div class="modal fade" id="modificarContrasena" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Modificar Contrasena</h4>
+                </div>
+                <div class="modal-body">
+                  <form role="form">
+                    <div class="box-body">
+                      <div class="row">
+                          <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Contraseña actual</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Nueva Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                             <p class="help-block">Debe tener 6 caracteres minimo, 10 maximo</p>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Confirmar Nueva Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal CrearNuevoUsuario-->
+          <div class="modal fade" id="crearNuevoUsuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Crear Nuevo Usuario</h4>
+              </div>
+              <div class="modal-body">
+                <!-- form start -->
+                <form role="form">
+                  <div class="box-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" name="nombre" [(ngModel)]="autenticacion.nombre">
+                        </div>
+                        <!--{{autenticacion.nombre}}-->
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Rut</label>
+                          <input type="text" class="form-control" id="rut" placeholder="Ingrese su rut" name="rut" [(ngModel)]="autenticacion.rut">
+                        </div>
+                        <!--{{autenticacion.rut}}-->
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Correo electronico</label>
+                          <input type="email" class="form-control" id="email" placeholder="Correo Electronico" name="email" [(ngModel)]="autenticacion.email">
+                        </div>
+                        <!--{{autenticacion.correo}}-->
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Confirmar correo electronico</label>
+                          <input type="email" class="form-control" id="emailConfirm" placeholder="Confirme correo electronico">
+                        </div>
+                      </div>
+                      <!-- /.form-group -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Apellido</label>
+                          <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="apellido" [(ngModel)]="autenticacion.apellido">
+                        </div>
+                        <!--{{autenticacion.apellido}}-->
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Telefono</label>
+                          <input type="number" class="form-control" id="telefono" placeholder="Telefono" name="telefono" [(ngModel)]="autenticacion.telefono">
+                        </div>
+                        <!--{{autenticacion.telefono}}-->
+                        <!-- /.form-group -->
+                        <div *ngIf="!showPassword">
+                          <div class="form-group has-feedback">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <input type="password" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Ingrese contraseña" name="password" [(ngModel)]="autenticacion.password">
+                             <span *ngIf="!showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-open form-control-feedback"
+                              style="cursor: pointer; pointer-events: all;">
+                            </span>
+                          </div>
+                        </div>
+                        <div *ngIf="showPassword">
+                          <div class="form-group has-feedback">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <input type="text" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Ingrese contraseña" name="password" [(ngModel)]="autenticacion.password">
+                             <span *ngIf="showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-close form-control-feedback"
+                              style="cursor: pointer; pointer-events: all;">
+                            </span>
+                          </div>
+                        </div>
+                        <!--{{autenticacion.password}}-->
+                        <!-- /.form-group -->
+                        <div *ngIf="!showPassword">
+                          <div class="form-group has-feedback">
+                            <label for="exampleInputPassword1">confirmar contraseña</label>
+                            <input type="password" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Confirme su contraseña" name="confirmPassword" [(ngModel)]="confirmPassword">
+                            <span *ngIf="!showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-open form-control-feedback"
+                             style="cursor: pointer; pointer-events: all;">
+                           </span>
+                          </div>
+                        </div>
+
+                        <div *ngIf="showPassword">
+                          <div class="form-group has-feedback">
+                            <label for="exampleInputPassword1">confirmar contraseña</label>
+                            <input type="text" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Confirme su contraseña" name="confirmPassword" [(ngModel)]="confirmPassword">
+                            <span *ngIf="showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-close form-control-feedback"
+                             style="cursor: pointer; pointer-events: all;">
+                           </span>
+                          </div>
+                        </div>
+
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                          <label class="control-sidebar-subheading">
+                            <b>Contraseña por defecto</b>
+                            <input type="checkbox" class="pull-right"  (change)="toggleEditable($event)">
+                          </label>
+
+                          <p>
+                            (establecer contraseña por defecto)
+                          </p>
+                        </div>
+                        <!--{{passwordByDefault}}-->
+                        <!-- /.form-group -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.box-body -->
+                </form>
+                <div *ngIf="successMessage" class="alert alert-success alert-dismissible">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  <strong>Todo bien!</strong> {{successMessage}}.
+                </div>
+                <div *ngIf="errorMessage" class="alert alert-error alert-dismissible">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  <strong>Hubo un error!</strong> {{errorMessage}}.
+                </div>
 
 
-          <hr>
-
-          <strong><i class="fa fa-male margin-r-5"></i> Perfil</strong>
-
-          <p>
-
-            <span class="label label-success">Admin</span>
-            <span class="label label-info">User</span>
-
-          </p>
-        </div>
-        <div class="box-footer">
-          <button type="submit" class="btn btn-info pull-left" data-toggle="modal" data-target="#actualizarPerfil">Actualizar Perfil</button>
-          <button type="submit" class="btn btn-info pull-right" data-toggle="modal" data-target="#modificarContrasena">Modificar Contraseña</button>
-        </div>
-        <div class="box-footer">
-          <button type="submit" class="btn btn-info pull-left" data-toggle="modal" data-target="#crearNuevoUsuario">Crear Nuevo Usuario</button>
-        </div>
-        <!-- /.box-footer -->
-        </div>
-        <!-- /.box -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)="registerUser(autenticacion)">Registrar Usuario</button>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
         <!-- /.col -->
       </div>
+      <!--/.row -->
     </section>
-  </div>
-
-  <!-- Modal actualizarPerfil-->
-  <div class="modal fade" id="actualizarPerfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel">Actualizar Perfil</h4>
-        </div>
-        <div class="modal-body">
-          <!-- form start -->
-          <form role="form">
-            <div class="box-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nombre</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Apellido</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Telefono Movil</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Telefono Fijo</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Correo Actual</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <!-- radio -->
-                  <div class="form-group">
-                      <label >Tipo de Usuario</label>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                          Administrador
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                        Usuario
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /.box-body -->
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal modificarContrasena-->
-  <div class="modal fade" id="modificarContrasena" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel">Modificar Contrasena</h4>
-        </div>
-        <div class="modal-body">
-          <form role="form">
-            <div class="box-body">
-              <div class="row">
-                  <div class="col-md-12">
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Contraseña actual</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Nueva Contraseña</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                     <p class="help-block">Debe tener 6 caracteres minimo, 10 maximo</p>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Confirmar Nueva Contraseña</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /.box-body -->
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal CrearNuevoUsuario-->
-  <div class="modal fade" id="crearNuevoUsuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel">Crear Nuevo Usuario</h4>
-        </div>
-        <div class="modal-body">
-          <!-- form start -->
-          <form role="form">
-            <div class="box-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" name="nombre" [(ngModel)]="autenticacion.nombre">
-                  </div>
-                  <!--{{autenticacion.nombre}}-->
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Rut</label>
-                    <input type="text" class="form-control" id="rut" placeholder="Ingrese su rut" name="rut" [(ngModel)]="autenticacion.rut">
-                  </div>
-                  <!--{{autenticacion.rut}}-->
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Correo electronico</label>
-                    <input type="email" class="form-control" id="email" placeholder="Correo Electronico" name="email" [(ngModel)]="autenticacion.email">
-                  </div>
-                  <!--{{autenticacion.correo}}-->
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Confirmar correo electronico</label>
-                    <input type="email" class="form-control" id="emailConfirm" placeholder="Confirme correo electronico">
-                  </div>
-                </div>
-                <!-- /.form-group -->
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Apellido</label>
-                    <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="apellido" [(ngModel)]="autenticacion.apellido">
-                  </div>
-                  <!--{{autenticacion.apellido}}-->
-                  <!-- /.form-group -->
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Telefono</label>
-                    <input type="number" class="form-control" id="telefono" placeholder="Telefono" name="telefono" [(ngModel)]="autenticacion.telefono">
-                  </div>
-                  <!--{{autenticacion.telefono}}-->
-                  <!-- /.form-group -->
-                  <div *ngIf="!showPassword">
-                    <div class="form-group has-feedback">
-                      <label for="exampleInputPassword1">Contraseña</label>
-                      <input type="password" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Ingrese contraseña" name="password" [(ngModel)]="autenticacion.password">
-                       <span *ngIf="!showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-open form-control-feedback"
-                        style="cursor: pointer; pointer-events: all;">
-                      </span>
-                    </div>
-                  </div>
-                  <div *ngIf="showPassword">
-                    <div class="form-group has-feedback">
-                      <label for="exampleInputPassword1">Contraseña</label>
-                      <input type="text" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Ingrese contraseña" name="password" [(ngModel)]="autenticacion.password">
-                       <span *ngIf="showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-close form-control-feedback"
-                        style="cursor: pointer; pointer-events: all;">
-                      </span>
-                    </div>
-                  </div>
-                  <!--{{autenticacion.password}}-->
-                  <!-- /.form-group -->
-                  <div *ngIf="!showPassword">
-                    <div class="form-group has-feedback">
-                      <label for="exampleInputPassword1">confirmar contraseña</label>
-                      <input type="password" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Confirme su contraseña" name="confirmPassword" [(ngModel)]="confirmPassword">
-                      <span *ngIf="!showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-open form-control-feedback"
-                       style="cursor: pointer; pointer-events: all;">
-                     </span>
-                    </div>
-                  </div>
-
-                  <div *ngIf="showPassword">
-                    <div class="form-group has-feedback">
-                      <label for="exampleInputPassword1">confirmar contraseña</label>
-                      <input type="text" [disabled]="passwordByDefault" class="form-control" id="exampleInputPassword1" placeholder="Confirme su contraseña" name="confirmPassword" [(ngModel)]="confirmPassword">
-                      <span *ngIf="showPassword" (click)="toggleShowPassword()" class="glyphicon glyphicon-eye-close form-control-feedback"
-                       style="cursor: pointer; pointer-events: all;">
-                     </span>
-                    </div>
-                  </div>
-
-                  <!-- /.form-group -->
-                  <div class="form-group">
-                    <label class="control-sidebar-subheading">
-                      <b>Contraseña por defecto</b>
-                      <input type="checkbox" class="pull-right"  (change)="toggleEditable($event)">
-                    </label>
-
-                    <p>
-                      (establecer contraseña por defecto)
-                    </p>
-                  </div>
-                  <!--{{passwordByDefault}}-->
-                  <!-- /.form-group -->
-                </div>
-              </div>
-            </div>
-            <!-- /.box-body -->
-          </form>
-          <div *ngIf="successMessage" class="alert alert-success alert-dismissible">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Todo bien!</strong> {{successMessage}}.
-          </div>
-          <div *ngIf="errorMessage" class="alert alert-error alert-dismissible">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Hubo un error!</strong> {{errorMessage}}.
-          </div>
-
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" (click)="registerUser(autenticacion)">Registrar Usuario</button>
-        </div>
-      </div>
-    </div>
+    <!--/.content-->
   </div>
   <app-footer></app-footer>
 </div>
